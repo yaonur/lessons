@@ -1,0 +1,9 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+	<h1>login</h1>
+	<form action="" method="POST">
+		{% csrf_token %}
+		<input type="submit" value="Submit" class="btn btn-secondary">
+	</form>
+{% endblock %}

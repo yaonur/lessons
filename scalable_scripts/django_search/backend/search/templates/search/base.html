@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+	      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+{#<form action="" method="POST" name="event_form">#}
+{#	{% csrf_token %}#}
+{#</form>#}
+<div class="d-flex justify-content-evenly">
+	<div class="list-group">
+		{% for event_id in event_ids %}
+			{% if event_id == selected_event_id|add:'0' %}
+				<a href="?id={{ event_id }}" class="list-group-item list-group-item-action active">{{ event_id }}</a>
+			{% else %}
+				<a href="?id={{ event_id }}" class="list-group-item list-group-item-action">{{ event_id }}</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div class="list-group">
+		{% for event_id in event_ids %}
+			{% if event_id == selected_event_id|add:'0' %}
+				<a href="?id={{ event_id }}" class="list-group-item list-group-item-action active">{{ event_id }}</a>
+			{% else %}
+				<a href="?id={{ event_id }}" class="list-group-item list-group-item-action">{{ event_id }}</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+</html>
