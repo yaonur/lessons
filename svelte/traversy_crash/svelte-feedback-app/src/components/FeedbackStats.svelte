@@ -1,6 +1,11 @@
 <script>
+	import {FeedbackStore} from "../stores";
+	
 	export let count
 	export let avarage
+	
+	$: count = $FeedbackStore.length
+	$: avarage = $FeedbackStore.reduce((a, {rating}) => a + rating, 0) / $FeedbackStore.length
 </script>
 
 <div class="feedback-stats">
