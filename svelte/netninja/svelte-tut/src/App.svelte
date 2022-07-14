@@ -2,7 +2,7 @@
 	import Modal from './Modal.svelte'
 	import AddPersonForm from "./AddPersonForm.svelte";
 	
-	let showModal = true;
+	let showModal = false;
 	const toggleModal = () => {
 		showModal = !showModal
 	}
@@ -16,11 +16,16 @@
 			return person.id != id
 		})
 	}
+	const addPerson = (e) => {
+		// console.log(e.detail)
+		const person = e.detail;
+		people = [person, ...people]
+	}
 	let num = 5;
 
 </script>
 <Modal message="im a prop" isPromo={false} {showModal} on:click={toggleModal}>
-	<AddPersonForm/>
+	<AddPersonForm on:addPerson={addPerson}/>
 </Modal>
 
 <main>
@@ -32,6 +37,13 @@
 				<p></p><strong>master ninjakkkk</strong>
 			{/if}
 			<p>{person.age} years old, {person.beltColour} belt.</p>
+			<div>
+				{#if person.skills}
+					{#each person.skills as skill }
+						<p>{skill}</p>
+					{/each}
+				{/if}
+			</div>
 			<button on:click={()=>handleClick(person.id)}>Delete</button>
 		</div>
 	{:else}
