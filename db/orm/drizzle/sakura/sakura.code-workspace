@@ -1,21 +1,25 @@
 {
 	"folders": [
+		{	"name":"root",
+			"path": ".",
+			"settings": {
+			}
+		},
 		{
 			"name":"DenoServer",
 			"path": "./server",
-			"settings": {
-				"deno.enable":true
-			}
-		},
-		{	"name":"root",
-			"path": ".",
-			"setting": {
-				"deno.enable":false
-			}
+			// "settings": {
+			// 	"deno.enable":true
+			// }
 		},
 	],
 	"settings": {
-	},
-	
+		"deno.enable": true,
+		"deno.lint": true,
+		"deno.unstable": false,
+		"deno.enablePaths": [
+			"./server"
+		],
+	}
 }
 

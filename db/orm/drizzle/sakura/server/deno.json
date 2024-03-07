@@ -1,8 +1,9 @@
 {
   "imports":{
-    "abc":"https://deno.land/x/abc@v1.3.3/mod.ts"
+    "abc":"https://deno.land/x/abc@v1.3.3/mod.ts",
+    "db":"../index.ts"
   },
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "dev": "deno run --allow-net --allow-read --allow-env --allow-write --watch  server.ts"
   }
 }
