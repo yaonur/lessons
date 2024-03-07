@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "generate": "drizzle-kit generate:pg --schema ./schema.ts",
-    "push": "bun migrate.ts"
+    "push": "bun migrate.ts",
+    "dev": "deno run --allow-net --allow-read --allow-env --allow-write ./server/server.ts"
   },
   "author": "",
   "license": "ISC",
