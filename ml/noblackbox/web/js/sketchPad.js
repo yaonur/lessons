@@ -21,7 +21,15 @@ class SketchPad {
     this.isDrawing = false;
     this.#redraw();
 
+    this.reset();
+
     this.#addEventListeners();
+  }
+
+  reset(){
+    this.paths=[];
+    this.isDrawing=false;
+    this.#redraw();
   }
 
   #addEventListeners() {
@@ -37,7 +45,7 @@ class SketchPad {
       lastPath.push(mouse);
       this.#redraw();
     };
-    this.canvas.onmouseup = () => {
+    document.onmouseup = () => {
       this.isDrawing = false;
     };
     this.canvas.ontouchstart = (evt) => {
@@ -48,7 +56,7 @@ class SketchPad {
       const loc = evt.touches[0];
       this.canvas.onmousemove(loc);
     };
-    this.canvas.ontouchend = (evt) => {
+    document.ontouchend = (evt) => {
       this.isDrawing = false;
     };
     this.undoBtn.onclick = () => {
