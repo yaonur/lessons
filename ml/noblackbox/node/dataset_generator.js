@@ -1,4 +1,5 @@
 import draw from "../common/draw.js"
+import {utils} from "../common/utils.js"
 import constants from "../common/constants.js"
 import {createCanvas} from '@napi-rs/canvas'
 const canvas = createCanvas(400,400)
@@ -27,14 +28,16 @@ fileNames.forEach(fn=>{
 			constants.JSON_DIR+"/"+id+".json",
 			JSON.stringify(drawings[label])
 		)
-		generateImageFile(
-			constants.IMG_DIR+"/"+id+".png",
-			paths
-		)
+		// generateImageFile(
+		// 	constants.IMG_DIR+"/"+id+".png",
+		// 	paths
+		// )
+		utils.printProgress(id,fileNames.length*8)
 		id++
 	}
 })
 fs.writeFileSync(constants.SAMPLES,JSON.stringify(samples))
+fs.writeFileSync(constants.SAMPLES_JS,"const samples="+JSON.stringify(samples)+";")
 
 function generateImageFile(outFile,paths){
 	ctx.clearRect(0,0,400,400)
