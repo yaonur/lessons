@@ -18,4 +18,5 @@ draw.paths=(ctx,paths,color="black")=>{
 	}
 }
 
-module.exports=draw
+export default draw
+
