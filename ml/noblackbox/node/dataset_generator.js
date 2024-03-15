@@ -1,6 +1,6 @@
-import draw from "../common/draw.js"
-import {utils} from "../common/utils.js"
-import constants from "../common/constants.js"
+const draw =require('../common/draw.js')
+const utils =require('../common/utils.js')
+const constants =require('../common/constants.js')
 import {createCanvas} from '@napi-rs/canvas'
 const canvas = createCanvas(400,400)
 const ctx = canvas.getContext("2d")

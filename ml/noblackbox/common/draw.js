@@ -18,5 +18,7 @@ draw.paths=(ctx,paths,color="black")=>{
 	}
 }
 
-export default draw
+if(typeof module!=='undefined'){
+	module.exports=draw
+}
 
