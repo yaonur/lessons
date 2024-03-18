@@ -1,5 +1,5 @@
 [package]
-name = "blinky"
+name = "hello"
 version = "0.1.0"
 authors = ["yaonur <ya_onur@hotmailc.om>"]
 edition = "2021"

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "asm",
+			"path": "asm"
+		},
+		{
+			"name": "lessons",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
