@@ -1,16 +1,11 @@
 {
-	"folders": [
-		{
-			"path": "rust/tutorials/ultimaterustcrashcourse/s2"
-		},
-		{
-			"name": "asm",
-			"path": "asm"
-		},
-		{
-			"name": "lessons",
-			"path": "."
-		},
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "./rust/tutorials/ultimaterustcrashcourse/s2"
+    },
+    {
+      "path": "."
+    }
+  ],
+  "settings": {}
 }
