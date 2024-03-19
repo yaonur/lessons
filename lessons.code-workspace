@@ -1,13 +1,16 @@
 {
 	"folders": [
 		{
+			"path": "rust/tutorials/rustlangudemy/s3"
+		},
+		{
 			"name": "asm",
 			"path": "asm"
 		},
 		{
 			"name": "lessons",
 			"path": "."
-		}
+		},
 	],
 	"settings": {}
 }
