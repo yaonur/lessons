@@ -22,3 +22,4 @@ fn memory_safety_init_var(){
     }
     println!("{}", enigma); // error if not else block before build rust saves day 
 }
+
